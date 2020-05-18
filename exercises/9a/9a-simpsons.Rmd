@@ -1,6 +1,6 @@
 ---
 title: "9a-simpsons-extension"
-author: "Nicholas Tierney"
+author: "your name"
 date: "17/05/2020"
 output: html_document
 ---
