@@ -7,10 +7,6 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 # you have to install this from github
 # run: remotes::install_github("sctyner/geomnet")
@@ -25,13 +21,8 @@ class_names
 ```
 
 
-```{r class-names}
-class_graph
-```
-
-
-```{r class-names}
-ggplot(class_graph, aes(from_id = s1_name, to_id = s2_name)) +
+```{r class-names-graph}
+ggplot(class_names, aes(from_id = s1_name, to_id = s2_name)) +
   geom_net(layout.alg = "kamadakawai",
     size = 2, 
     labelon = TRUE, 
