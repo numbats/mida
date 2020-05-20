@@ -139,7 +139,6 @@ This model explains 43% of the variation in the data.
 ```{r}
 # add some controls for selecting dates, using the dateRangeInput
 date_compare <- c(ymd("2019-04-01"), ymd("2019-04-07"))
-
 ```
 
 Column
