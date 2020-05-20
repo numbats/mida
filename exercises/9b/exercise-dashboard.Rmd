@@ -1,0 +1,187 @@
+---
+title: "My new dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(broom)
+library(shiny)
+library(lubridate)
+library(sugrrants)
+```
+
+```{r data-load}
+elec_all <- read_rds("data/elec_all.rds")
+fit <- read_rds("data/model_fit.rds")
+```
+
+
+Overview
+=============================
+
+Column 
+-----------------------------------------------------------------------
+
+### User Controls
+
+```{r calendar-controls, echo = FALSE}
+# threshold line
+thresh_ui <- numericInput(
+  "threshold", "Daily kWh threshold:", 12, min = 0, max = 30
+)
+
+thresh_ui
+
+# date range inputs
+start_date <- ymd("2018-01-01")
+end_date <- ymd("2018-12-31")
+
+daterange_ui <- dateRangeInput(
+  "selected_dates", 
+  "Select Dates for Calendar Display", 
+  start = start_date, 
+  end = end_date, 
+  min = min(elec_all$date), 
+  max = max(elec_all$date)
+)
+
+daterange_ui
+
+vars_ui <- selectInput(inputId = "colour_vars",
+                       label = "Colour lines",
+                       selected = "work",
+                       choices = c("work", "air_con"))
+
+vars_ui
+```
+
+
+
+Column {data-height=800}
+-----------------------------------------------------------------------
+
+### Calender
+
+```{r calendarise, echo = FALSE}
+
+selected_colour <- reactive({
+  sym(input$colour_vars)
+})
+
+elec_sub <- reactive({
+  start_date <- input$selected_dates[1]
+  end_date <- input$selected_dates[2]
+  elec_all %>% 
+    filter(between(date, start_date, end_date))
+})
+
+
+calenderise <- reactive({
+  
+  elec_sub <- elec_sub()
+  
+  daily <- elec_sub %>% 
+    group_by(date) %>% 
+    summarise(daily_kwh = sum(kwh))
+  
+  joined <- elec_sub %>% 
+    left_join(daily, by = "date") %>% 
+    mutate(over_threshold = daily_kwh > input$threshold )
+  
+  frame_calendar(joined, 
+                 x = time, 
+                 y = kwh, 
+                 date = date, 
+                 ncol = 4)
+})
+
+```
+
+
+```{r draw-calendar, out.width="100%"}
+renderPlot({
+  calendar <- calenderise()
+  var <- selected_colour()
+  p <- ggplot(calendar, aes(x = .time, y = .kwh, group = date)) +
+  geom_line(aes(linetype = over_threshold, colour = !!var)) +
+  labs(linetype = "Over daily threshold") +
+  theme(legend.position = "bottom")
+  prettify(p)
+})
+```
+
+
+Predict 
+=============================
+
+Column
+------------------------------------
+
+### Model building
+
+We _fit_ a _linear model_ on log-transformed energy usage for 2018, using a four-way interaction: work day versus non-work day, time of the day, month, air conditioner switch on or not.
+
+$log(energy_i + 1) = work_i \times time_i \times month_i \times aircon_i$
+
+where all predictors are categorical variables. Note we create a dummy variable `aircon` to indicate the switch status of air conditioner. If daily maximum temperature is greater than 30 or daily minimum is less than 5, we switch on the air conditioner. 
+
+This model explains 43% of the variation in the data.
+
+
+### Predict energy usage between {data-width=100}
+
+```{r}
+# add some controls for selecting dates, using the dateRangeInput
+date_compare <- c(ymd("2019-04-01"), ymd("2019-04-07"))
+
+```
+
+Column
+------------------------------------
+
+### Predicted versus observed usage {data-height=400}
+
+```{r comparision, eval = FALSE}
+
+# rewrite this code to be a reactive expression
+
+elec_compare <- elec_all %>% 
+  filter(between(date, date_compare[1], date_compare[2])) %>% 
+  mutate(time = as.factor(as.character(time)),
+         month = factor(month, ordered = FALSE))
+```
+
+```{r augment, eval = FALSE}
+# rewrite this code to be a reactive expression
+
+elec_augment <- augment(fit, newdata = elec_compare) %>% 
+  mutate(.fitted = expm1(.fitted))
+```
+
+```{r, eval = FALSE}
+# change this code to be a rendered plot, that responds to the user
+# updating the dateRangeInput
+
+elec_augment %>% 
+  select(date, time, observed = kwh, predicted = .fitted) %>% 
+  pivot_longer(observed:predicted, names_to = "type", values_to = "kwh") %>% 
+  ggplot(aes(x = time, y = kwh, color = type, group = type)) +
+  geom_line() +
+  facet_wrap(~date) +
+  labs(y = "Kilowatt Hours", x = "Time of Day", color = NULL) +
+  scale_color_brewer(palette = "Dark2") +
+  theme(legend.position = "bottom") 
+
+```
+
+
+
+Explain
+=============================
+
