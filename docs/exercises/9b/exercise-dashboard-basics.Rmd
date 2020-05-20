@@ -1,0 +1,94 @@
+---
+title: "Making A Dashboard with flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+```
+
+
+Overview 
+=======================================================================
+
+Column
+-----------------------------
+
+```{r, echo = FALSE, fig.align="centre", out.width = "100%", }
+xhrt <- function(t) 16*sin(t)^3
+yhrt <- function(t) 13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)
+frame <- tibble(t=seq(0, 2*pi, length.out=100),
+                x = xhrt(t),
+                y = yhrt(t))
+
+ggplot(frame, aes(x = x, y = y)) + 
+  geom_polygon(fill = "lightpink") +
+  geom_text(aes(x = mean(x), y = mean(y), label = "DATA"), 
+            color = "grey90",
+            size = 18) +
+  theme_void()
+```
+
+
+Column {.tabset}
+------------------------------
+
+### What's required to make a dashboard?
+
+A dashboard is a way of communicating the output of data analysis to an audience, 
+who may not be familiar with the intricate details of your data or the findings 
+of your analysis but need to understand what you've done. 
+
+You could think of a dashboard as an interactive story: it should provide a big picture overview of what the data shows, while allowing the user to interrogate specifics that they are interested. The dashboard should guide the 
+user through your analysis and highlight details and findings you want them to understand. 
+
+### What's required?
+
+Before embarking on constructing a dashboard, you should have a pretty good
+idea about your data: most of the wrangling and cleaning would be finished,
+and models should be precomputed and saved, and an idea of what
+visualisations you would like to show. The code you write to make a dashboard,
+will mostly involve reshaping your data to make plots, that allow for 
+visualisations.
+
+
+### Design goals
+
+1. at lest two inputs that a user can select or change things in the display 
+1. at least one  interactive plot 
+1. one user interface element containing modeling
+1. a separate tab with description of the methodology, 
+
+
+Data 
+=======================================================================
+
+Column {data-width=500}
+------------------------------------
+
+### How does my daily electricity usage change over time?
+
+Our data is smart meter electricity usage, we have kilowatt per hour
+usage measured for one household over a couple of years. 
+We have also joined weather information for each day of the year to the
+smart meter measurements and have saved the results to a tidy data.frame:
+
+```{r}
+elec_all <- read_rds("data/elec_all.rds")
+elec_all
+```
+
+
+### Making a model and predictions 
+
+We also fitted a linear model to this data, the model is a little complicated
+but for the purposes of making a dashboard, we are interesting in showing
+predictions from it.
+
+```{r}
+fit <- read_rds("data/model_fit.rds")
+summary(fit)
+```
