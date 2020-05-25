@@ -175,15 +175,6 @@ df_rp &lt;- rpart(y~x, data=df)
 ---
 # Look at residuals
 
-
-```r
-ggplot(df_rp_aug,
-       aes(x = x,
-           y = y)) + 
-  geom_point() +
-  geom_line(aes(y = .fitted), colour = "salmon", size = 2)
-```
-
 &lt;img src="lecture_10a_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 
@@ -490,7 +481,7 @@ The relative error is `\(1-R^2\)`. For this example, after 6 splits it is 0.1371
 - Also means that there is not a nice formula for the model as a result, or inference about populations available
 
 ---
-# Next week: Classification trees
+# Next lecture: Classification trees
 
 When the response is categorical, the model is called a classification tree. The criteria for making the splits changes also. There are a number of split criteria commonly used. If we consider a binary response ($y=0, 1$), and `\(p\)` is the proportion of observations in class `\(1\)`.
 
@@ -504,58 +495,6 @@ Which rewards splits where the observations are all one class.
 
 - Return of the paintings data
 - Just predict price with year
-
-
-```r
-pp &lt;- read_csv(here::here("slides/data/paris-paintings.csv"))
-
-pp_lm &lt;- lm(logprice ~ Height_in + Width_in, data = pp)
-pp_rp &lt;- rpart(logprice ~ Height_in + Width_in + year, data = pp)
-
-pp_lm_aug &lt;- augment(pp_lm)
-pp_rp_aug &lt;- augment(pp_rp)
-library(rpart.plot)
-rpart.plot(pp_rp)
-```
-
-&lt;img src="lecture_10a_files/figure-html/unnamed-chunk-22-1.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-- include a bit on adding more variables
-- include a bit on using more variables to predict something interesting
-- link to the data dictionary: http://www2.stat.duke.edu/~cr173/Sta112_Fa16/data/paris_paintings.html
-- describe why we've subsetted the data (to avoid perfect predictors?)
-
-
-```r
-pp_rp_all &lt;- rpart(logprice ~ ., data = select(pp, 
-                                               logprice,
-                                               origin_author,
-                                               school_pntg,
-                                               artistliving,
-                                               authorstyle,
-                                               endbuyer,
-                                               Height_in:mat,
-                                               engraved:finished,
-                                               relig,
-                                               landsALL,
-                                               arch:other))
-
-rpart.plot(pp_rp_all)
-```
-
-&lt;img src="lecture_10a_files/figure-html/unnamed-chunk-23-1.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-
-
-```r
-tidy(pp_rp_all) %&gt;% 
-  ggplot(aes(x = importance,
-             y = reorder(variable, importance))) + 
-  geom_col()
-```
-
-&lt;img src="lecture_10a_files/figure-html/unnamed-chunk-24-1.png" width="100%" style="display: block; margin: auto;" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>

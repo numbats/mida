@@ -202,12 +202,11 @@ ggplot(df_rp_aug,
 ---
 # Look at residuals
 
-```{r}
+```{r, echo = FALSE}
 ggplot(df_rp_aug,
        aes(x = x,
-           y = y)) + 
-  geom_point() +
-  geom_line(aes(y = .fitted), colour = "salmon", size = 2)
+           y = .resid)) + 
+  geom_point() 
 ```
 
 
@@ -619,7 +618,7 @@ The relative error is $1-R^2$. For this example, after 6 splits it is `r gof[6,3
 - Also means that there is not a nice formula for the model as a result, or inference about populations available
 
 ---
-# Next week: Classification trees
+# Next lecture: Classification trees
 
 When the response is categorical, the model is called a classification tree. The criteria for making the splits changes also. There are a number of split criteria commonly used. If we consider a binary response ($y=0, 1$), and $p$ is the proportion of observations in class $1$.
 
@@ -634,47 +633,4 @@ Which rewards splits where the observations are all one class.
 - Return of the paintings data
 - Just predict price with year
 
-```{r}
-pp <- read_csv(here::here("slides/data/paris-paintings.csv"))
-
-pp_lm <- lm(logprice ~ Height_in + Width_in, data = pp)
-pp_rp <- rpart(logprice ~ Height_in + Width_in + year, data = pp)
-
-pp_lm_aug <- augment(pp_lm)
-pp_rp_aug <- augment(pp_rp)
-library(rpart.plot)
-rpart.plot(pp_rp)
-```
-
-- include a bit on adding more variables
-- include a bit on using more variables to predict something interesting
-- link to the data dictionary: http://www2.stat.duke.edu/~cr173/Sta112_Fa16/data/paris_paintings.html
-- describe why we've subsetted the data (to avoid perfect predictors?)
-
-```{r}
-pp_rp_all <- rpart(logprice ~ ., data = select(pp, 
-                                               logprice,
-                                               origin_author,
-                                               school_pntg,
-                                               artistliving,
-                                               authorstyle,
-                                               endbuyer,
-                                               Height_in:mat,
-                                               engraved:finished,
-                                               relig,
-                                               landsALL,
-                                               arch:other))
-
-rpart.plot(pp_rp_all)
-```
-
----
-
-```{r}
-tidy(pp_rp_all) %>% 
-  ggplot(aes(x = importance,
-             y = reorder(variable, importance))) + 
-  geom_col()
-
-```
 
