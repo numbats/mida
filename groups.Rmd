@@ -13,6 +13,58 @@ library(knitr)
 library(kableExtra)
 ```
 
+## Assignment 2 Peer Evaluation
+
+In the table below you will find your student number and link to a zip
+file containing another groups project. Your task is to try and reproduce
+the other groups analysis, and read over their project. There will be a
+quiz for you to respond to on ED during the class on 27th May. 
+
+```{r setup-pe, eval = FALSE, echo = FALSE}
+active_participants <- read_csv("active.csv", na = "-") %>% 
+  janitor::clean_names() %>% 
+  filter(!is.na(quiz_mida_midsemester_test_percentage)) %>% 
+  select(monash_id = id_number)
+
+library(googlesheets4)
+gradebook <- "https://docs.google.com/spreadsheets/d/1C9RZRbD5sCzT6c4OhELdyTaBPCgtKQzX66CuFzUvUxg/edit?usp=sharing"
+group_pe <- read_sheet(gradebook, 1) %>% 
+  select(monash_id, group_name) %>% 
+  filter(!is.na(group_name)) %>% 
+  mutate(
+    group_name = if_else(group_name == "tibble", "WeRTidy", group_name),
+    group_name = if_else(group_name == "rmarkdown", "flowers", group_name)
+  ) %>% 
+  inner_join(active_participants)
+
+zipfiles <- list.files("./assignments/peer-evaluation/", pattern = ".zip$")
+
+set.seed(5510)
+group_pe <- group_pe %>% 
+  mutate(
+    to_group = sample(group_name), # shuffle
+    to_group = if_else(group_name == to_group, sample(to_group),  to_group)
+  ) %>% 
+  rename(from_group = group_name)
+
+# check sampling worked
+group_pe %>% filter(from_group == to_group)
+
+write_csv(group_pe, here::here("assignments", "peer-evaluation.csv"))
+```
+
+```{r display-pe-groups, echo = FALSE}
+read_csv(here::here("assignments", "peer-evaluation.csv")) %>% 
+  mutate(zip = paste0("[", to_group, "](assignments/peer-evaluation/", to_group, ".zip)")) %>% 
+  select(monash_id, peer_evaluate_group = zip) %>% 
+  kable(escape = FALSE, align = c("l", "l")) %>% 
+  kable_styling(bootstrap_options = "striped", fixed_thead = T) %>% 
+  column_spec(1, width = "1cm") %>% 
+  column_spec(2, width = "1cm") 
+```
+
+## Project groups
+
 In the table below you will find your project group name, along with each member's student email. 
 
 Please check this for correctness and email any mistakes to the course email address.
