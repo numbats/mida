@@ -22,7 +22,7 @@ appropriate questions to answer about the data, and planning how to execute anal
 
 4. Describe your cleaning procedures and analytics in web story board, which can be done using a slideshow, created `xaringan`, a `flexdashboard`, or a simple `shiny` app. You  should include why you chose the data and what learned about the problem by completing this project. We can upload these to the departmental shiny server for everyone to see, and so that you can show it off to future employers or your family members.
 
-5.  Present your data analysis in class, a 5 minute oral presentation, recorded with zoom.
+5.  Present your data analysis in class, as a 5 - 10 minute oral presentation, pre-recorded with zoom. You will upload your presentation to moodle as a video assignment and we will watch the presentations during the last class in week 12.
 
 This project will be conducted collaboratively, withs team of your choices, and with  **a maximum team size of 4** To ensure correct marks are awarded, please carefully document, in detail, your individual contributions to the project. Each team member is expected to participate substantially in all aspects of the work, including the writing and oral presentation.
 
@@ -30,8 +30,8 @@ This project will be conducted collaboratively, withs team of your choices, and 
 due_date <- c("Milestone 1: 13th May",
               "Milestone 2: 20th May", 
               "Milestone 3: 27th May",
-              "Milestone 4: 3rd June",
-              "Milestone 5: 10th June")
+              "Milestone 4: 5th June",
+              "Milestone 5: (Video submission 9th June, Presentation Class 10th June)")
 
 # Find team members, and potential topics to study (List of groups will be posted here)
 # Team members and team name, data description.
@@ -49,7 +49,7 @@ points <- c(5,
             5,
             10,
             40,
-            "30 (peer evaluation) 5 points will be deducted from your presenta- tion score if you do not attend for the entire class, and 5 points if you skip the class where you did not present.")
+            "30 (peer evaluation) 5 points will be deducted from your presentation score if you do not attend for the entire class, and 5 points if you skip the class where you did not present.")
 
 library(tibble)
 df_project <- tibble(`Due date` = due_date,
@@ -66,10 +66,9 @@ kable(df_project) %>%
   column_spec(3, width = "20em")
 ```
 
-## Marking Guide
+## Marking Guide for flexdashboard/xaringan/shiny/
 
-To help you complete the project, below is a rubric to guide you what we
-are expecting to in your final dashboard:
+To help you complete the project, below is a rubric to guide you  to what we are expecting in your final dashboard:
 
 ```{r, echo = FALSE, message=FALSE}
 rubric <- readr::read_tsv(here::here("project/rubric.tsv")) %>% 
