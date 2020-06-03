@@ -77,9 +77,9 @@ class: transition
 ---
 # Practical Exam: How Marks are allocated
 
-- 35 marks total
+- 37 marks total
   - 7 Marks for submitting an Rmd document that compiles to HTML with full answers
-  - 28 Marks for correctly answering the questions in the Rmd (a mixture of short answer and code)
+  - 30 Marks for correctly answering the questions in the Rmd (a mixture of short answer and code)
   
 
 ---
