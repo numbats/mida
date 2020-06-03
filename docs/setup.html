@@ -400,23 +400,23 @@ my_varíable</code></pre>
 <p>Most computations are performed by using <em>functions</em>. Functions take some input (arguments) and return an output. As an example, let’s use R’s built-in random number generator function <strong><code>runif()</code></strong> to generate 10 random numbers between 0 and 1.</p>
 <p>If you type the number 10 as the first argument you will get 10 random numbers between 0 and 1.</p>
 <pre class="r"><code>runif(10)</code></pre>
-<pre><code>#&gt;  [1] 0.05675298 0.85211217 0.54762675 0.81063878 0.30474794 0.88766509
-#&gt;  [7] 0.75730190 0.25072602 0.21739441 0.64529705</code></pre>
+<pre><code>#&gt;  [1] 0.29614707 0.32769903 0.87429311 0.61414034 0.07141809 0.46152141
+#&gt;  [7] 0.19531762 0.09259858 0.12866640 0.01490003</code></pre>
 <p>If you type <strong><code>runif()</code></strong> in the RStudio console and then press <strong>TAB</strong> on your keyboard, a floating tooltip will appear that contains the names of the inputs to the function.</p>
 <p>You can be more explicit by specifying each input:</p>
 <pre class="r"><code>runif(n = 10, min = 0, max = 1)</code></pre>
-<pre><code>#&gt;  [1] 0.11479283 0.06096640 0.56781887 0.75881001 0.43030681 0.96808447
-#&gt;  [7] 0.55803386 0.03687535 0.05082796 0.98865317</code></pre>
+<pre><code>#&gt;  [1] 0.4047332 0.5594455 0.2644337 0.2554977 0.2643289 0.7931630 0.3091934
+#&gt;  [8] 0.3777057 0.5361418 0.4788223</code></pre>
 <p>By changing the values of the arguments, we can finally generate our numbers between 0 and 10.</p>
 <pre class="r"><code>runif(10, min = 0, max = 10)</code></pre>
-<pre><code>#&gt;  [1] 4.2363122 5.0959909 7.8805171 8.6628999 3.1831287 8.4359936 1.6534178
-#&gt;  [8] 7.3108826 2.3430038 0.6889172</code></pre>
+<pre><code>#&gt;  [1] 3.247854 6.602838 5.587097 6.730972 9.619522 2.864200 4.059660 9.238728
+#&gt;  [9] 9.546601 3.739686</code></pre>
 <p>And you can save the result to an object using the <strong><code>&lt;-</code></strong> operator.</p>
 <pre class="r"><code>y &lt;- runif(10, min  = 0, max = 10)
 
 y</code></pre>
-<pre><code>#&gt;  [1] 7.724727 7.795702 7.018723 9.718914 1.043873 8.061193 4.800467 8.734620
-#&gt;  [9] 3.679587 1.780983</code></pre>
+<pre><code>#&gt;  [1] 3.7441952 9.0954289 6.1879159 2.6384848 7.8668463 0.3675443 7.5540640
+#&gt;  [8] 3.2578185 5.9189878 6.2539780</code></pre>
 <div id="computing-summaries" class="section level3">
 <h3>Computing summaries</h3>
 <p>So far, you’ve explored the basics of using R as a calculator and creating objects and calling functions.</p>
