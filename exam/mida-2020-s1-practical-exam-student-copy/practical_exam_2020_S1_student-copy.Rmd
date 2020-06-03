@@ -1,6 +1,6 @@
 ---
 title: "ETC5510 Practical exam S1 2020"
-author: "Your Name"
+author: "Your Name Here"
 output: 
   html_document
 ---
