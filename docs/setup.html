@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Stuart Lee" />
+
+
+<title>ETC5510 Handout: Preparing for the course</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="assets/styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- NOTE: add "navbar-inverse" class for an alternate navbar background -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img class="navbar-brand"  src='assets/monash-logo.png'> 
+      <a class="navbar-brand" href="index.html">ETC5510: Introduction to Data Analysis</a>
+      <div class="navbar-brand" style="color: #E6E6E6; font-size:0.8em;">2020 S1</div>
+      <div class="navbar-brand d-none d-print-block" style="color: #E6E6E6; font-size:0.8em;">Copyright &copy; Monash University</div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="assessment.html"><i class="fas fa-tasks"></i>Assessment</a></li>
+        <li><a href="https://lms.monash.edu/course/view.php?id=63617"><i class="fas fa-archive"></i>Moodle</a></li>
+        <li><a href="https://unitguidemanager.monash.edu/view?unitCode=ETC5510&tpCode=S1-01&tpYear=2020"><i class="fas fa-book"></i>Unit Guide</a></li>
+        <li><a href="https://edstem.org/courses/4192"><i class="fa fa-graduation-cap"></i>ED</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">ETC5510 Handout: Preparing for the course</h1>
+<h3 class="subtitle">Setting up R and Rstudio</h3>
+<h4 class="author">Stuart Lee</h4>
+
+</div>
+
+
+<p>The language of data analysis is the R programming language. It powers the work of people like data scientists, statisticians, social and natural scientists all over the world by allowing them to perform and communicate their data analyses in a principled way.</p>
+<p>Throughout this course you’ll learn how to program in R and use the R programming language to make graphics, produce reports and even create interactive web applications. Before you do, you’ll need to get yourself ready by installing:</p>
+<ul>
+<li>the R programming language on your computer</li>
+<li>an integrated development environment (IDE) called RStudio that allows you to write R programs and interact with R code on your computer.</li>
+</ul>
+<p>There are many other guides available for installing R that are just a web search away. One particular favourite is this guide by Kieran Healy from his <a href="http://socviz.co/index.html#install">Data Visualisation book</a>. It is also worth reading the <a href="https://socviz.co/appendix.html">appendix</a> which provides a comprehensive tutorial on how to read R documentation.</p>
+<div id="getting-started-whats-the-difference" class="section level2">
+<h2>Getting started: what’s the difference?</h2>
+<p>You might be asking: so what’s the difference between R and RStudio? <a href="http://jules32.github.io/resources/RStudio_intro/">Julie Lowndes</a> gives a great answer:</p>
+<blockquote>
+<p>If R were an airplane, RStudio would be the airport, providing many, many supporting services that make it easier for you, the pilot, to take off and go to awesome places. Sure, you can fly an airplane without an airport, but having those runways and supporting infrastructure is a game-changer.</p>
+</blockquote>
+<p>The following provides an overview of how to download, install and get up and running with R and RStudio.</p>
+</div>
+<div id="download-and-install-r" class="section level2">
+<h2>Download and install R</h2>
+<p>You can <a href="https://cran.r-project.org/">download the R language from the Comprehensive R Archive Network</a> or CRAN for short.</p>
+<p>On the CRAN website, there are a list of links to download R for different operating systems, for example, Linux, (Mac) OS X and Windows. To download R to your computer, select the link that corresponds to your operating system. You can then install R.</p>
+</div>
+<div id="download-and-install-rstudio" class="section level2">
+<h2>Download and install RStudio</h2>
+<p>Once you have installed R, you are ready to install RStudio. For this course, the free version of RStudio is suitable. Get RStudio from the <a href="https://www.rstudio.com/products/rstudio/download/">RStudio downloads page</a>. Select the <strong>‘Download’</strong> link and then select the installer that corresponds to your operating system.</p>
+</div>
+<div id="r-and-rstudio-on-windows" class="section level2">
+<h2>R and RStudio on Windows</h2>
+<p>If you are a Windows user, the CRAN website will redirect you to a page with a list of subdirectories. Select the link called <strong><code>base</code></strong>.</p>
+<p><em>Please note, the following image is an example only; the version listed on the website may differ.</em></p>
+<div class="figure" style="text-align: center">
+<img src="slides/images/R-install-windows.png" alt="CRAN website, Windows link" width="840" />
+<p class="caption">
+CRAN website, Windows link
+</p>
+</div>
+<p>You will be directed to a new page with a link to download R, for example, <strong><code>Download R 3.6.2 for Windows</code></strong>. Select the link to download R for Windows.</p>
+<p>Once R has finished downloading, open the <strong>.exe</strong> file and work through the setup prompts. Once the setup is complete, <a href="https://www.rstudio.com/products/rstudio/download//#download">download the latest version of the RStudio</a> executable. Then, open the <strong>‘.exe’</strong> file and work through the setup prompts.</p>
+</div>
+<div id="r-and-rstudio-on-mac-os-x" class="section level2">
+<h2>R and RStudio on Mac OS X</h2>
+<p>If you are a Mac OS X user, the CRAN website will redirect you to a page with a list of releases. Select the link, for example, <strong><code>R-3.6.2.pkg</code></strong> to download the latest release.</p>
+<p><em>Please note, the following image is an example only; the version listed on the website may differ.</em></p>
+<div class="figure" style="text-align: center">
+<img src="slides/images/R-install-macos.png" alt="CRAN website, MacOS  link" width="1668" />
+<p class="caption">
+CRAN website, MacOS link
+</p>
+</div>
+<p>Once R has finished downloading, open the <strong>‘.pkg’</strong> and then work through the setup prompts. Once the setup is complete, <a href="https://www.rstudio.com/products/rstudio/download/#download">download the latest version of RStudio</a>. Then, open the <strong>‘.dmg’</strong> file and then follow the prompts.</p>
+</div>
+<div id="check-your-installation" class="section level2">
+<h2>Check your installation!</h2>
+<p>Well done, you’ve installed R and RStudio on your computer. Open RStudio to check that everything has installed correctly and to explore the RStudio interface. The RStudio interface should be divided into <strong>four</strong> panes:</p>
+<ul>
+<li><p><strong>scripts</strong> pane - the place where you write and save your R code.</p></li>
+<li><p>tab for the <strong>console</strong> - the place where your code gets run. You can write code directly in here, but you might forget the code you write, so it’s a good idea to write your code in the <strong>scripts</strong> pane.</p></li>
+<li><p>tab for <strong>Files</strong>, <strong>Plots</strong>, <strong>Packages</strong>, <strong>Help</strong>, and a <strong>Viewer</strong> - files are listed here, just like a ‘Finder’ in Mac OS X or ‘My Computer’ in Windows.</p></li>
+<li><p>tab for <strong>Environment</strong>, <strong>History</strong> and <strong>Connections</strong> - things you create in R that are a result of code being run, such as data, objects and models are listed in the <strong>Environment</strong>.</p></li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="slides/images/Rstudio-01.png" alt="The Rstudio IDE" width="960" />
+<p class="caption">
+The Rstudio IDE
+</p>
+</div>
+</div>
+<div id="playing-with-the-console" class="section level2">
+<h2>Playing with the console</h2>
+<p>Continue to explore RStudio by making your way through this exercise - using R as a calculator. At the prompt of your <strong>console</strong> in RStudio, run the following code chunk:</p>
+<pre class="r"><code>1999 * 2 / 1000
+
+(39 + 13 + 2) / 4
+
+cos(pi)</code></pre>
+<p>Store the results of your computation as an object using the left arrow <strong><code>&lt;-</code></strong> (The shortcut in RStudio is <strong>Alt + -</strong>).</p>
+<p>Again, at the prompt of your <strong>console</strong> in RStudio, run the following code chunk:</p>
+<pre class="r"><code>my_variable &lt;- 7 * 8</code></pre>
+<div id="whats-it-doing" class="section level3">
+<h3>What’s it doing?</h3>
+<p>This is read as <strong><code>my_variable</code></strong> gets the value of <strong><code>7*8</code></strong>. In your RStudio the object called <strong><code>my_variable</code></strong> should be listed in the <strong>Environment pane</strong>.</p>
+<p>Print the value of <strong><code>my_variable</code></strong> again by typing <strong><code>my_variable</code></strong> at the console.</p>
+</div>
+<div id="naming-conventions-are-important" class="section level3">
+<h3>Naming conventions are important!</h3>
+<p>Names of objects are important. You want them to be descriptive, and if you have multiple words in a name you need a way of dealing with that.</p>
+<p>The convention we will use in this course is <em>snake_case</em>, where we separate multiple words by an underscore, and use all lower case. The most important thing though is to be consistent with your names.</p>
+<p>Names are <strong>case sensitive</strong> and their <strong>spelling</strong> matters, otherwise R will not be able to correctly interpret the result.</p>
+<p>Try running the following code:</p>
+<pre class="r"><code>my_Variable
+
+my_varíable</code></pre>
+</div>
+<div id="why-does-r-give-you-an-error" class="section level3">
+<h3>Why does R give you an error?</h3>
+<p>R gives an error for the first line of code because there was an upper case <strong><code>V</code></strong> instead of a lower case <strong><code>v</code></strong>. Similarly, the second is an error because there was an accented <strong><code>i</code></strong> instead of an unaccented <strong><code>i</code></strong>.</p>
+</div>
+</div>
+<div id="using-functions" class="section level2">
+<h2>Using functions</h2>
+<p>Most computations are performed by using <em>functions</em>. Functions take some input (arguments) and return an output. As an example, let’s use R’s built-in random number generator function <strong><code>runif()</code></strong> to generate 10 random numbers between 0 and 1.</p>
+<p>If you type the number 10 as the first argument you will get 10 random numbers between 0 and 1.</p>
+<pre class="r"><code>runif(10)</code></pre>
+<pre><code>#&gt;  [1] 0.68349053 0.54648195 0.03599221 0.65322261 0.37382582 0.21959882
+#&gt;  [7] 0.24318417 0.18070973 0.75375620 0.06696951</code></pre>
+<p>If you type <strong><code>runif()</code></strong> in the RStudio console and then press <strong>TAB</strong> on your keyboard, a floating tooltip will appear that contains the names of the inputs to the function.</p>
+<p>You can be more explicit by specifying each input:</p>
+<pre class="r"><code>runif(n = 10, min = 0, max = 1)</code></pre>
+<pre><code>#&gt;  [1] 0.6094444 0.4874482 0.9684221 0.1630191 0.2530054 0.4123922 0.2909368
+#&gt;  [8] 0.4941748 0.9768102 0.1424659</code></pre>
+<p>By changing the values of the arguments, we can finally generate our numbers between 0 and 10.</p>
+<pre class="r"><code>runif(10, min = 0, max = 10)</code></pre>
+<pre><code>#&gt;  [1] 9.387189 1.826965 4.989520 6.617591 3.000502 9.474918 7.513713 2.560833
+#&gt;  [9] 5.196502 9.371873</code></pre>
+<p>And you can save the result to an object using the <strong><code>&lt;-</code></strong> operator.</p>
+<pre class="r"><code>y &lt;- runif(10, min  = 0, max = 10)
+
+y</code></pre>
+<pre><code>#&gt;  [1] 2.372740 1.699692 8.169798 3.918024 6.115182 2.084318 7.344433 5.103317
+#&gt;  [9] 1.927837 3.039568</code></pre>
+<div id="computing-summaries" class="section level3">
+<h3>Computing summaries</h3>
+<p>So far, you’ve explored the basics of using R as a calculator and creating objects and calling functions.</p>
+<p>Consider expanding your R vocabulary by using the following functions to compute the <strong>mean</strong> using the <strong><code>mean()</code></strong> function, the <strong>variance</strong> using the <strong><code>var()</code></strong> function, and the <strong>range</strong> using the <strong><code>range()</code></strong> function of the object <strong><code>y</code></strong> you just created. Again, you can do this from the <strong>Console</strong>.</p>
+<p>Remember, if you are not sure how to use the function, type the name of it in the console and press <strong>TAB</strong> on your keyboard.</p>
+</div>
+</div>
+<div id="lab-exercise-so-random" class="section level2">
+<h2>Lab Exercise: so random!</h2>
+<ul>
+<li><strong>You may have noticed the numbers you generated at your R console are different from the ones presented earlier. Why is that?</strong></li>
+<li><strong>Look up the help file for the function <code>set.seed</code> by typing a question mark in front of it at the console: <code>?set.seed</code>.</strong> If you need help understanding this read over this <a href="https://socviz.co/appendix.html">document</a>.</li>
+<li><strong>How could you use it to ensure you get the same random numbers?</strong></li>
+</ul>
+</div>
+<div id="setting-up-for-success-data-science-workflow" class="section level2">
+<h2>Setting up for success: data science workflow</h2>
+<p>When working on a new project, it is possible for your files to be spread out and stored in different locations across your computer.</p>
+<p>This can create problems, particularly when you are programming because knowing exactly where your files are is really important. When they are spread out, this makes extra work for yourself.</p>
+</div>
+<div id="getting-into-the-workflow" class="section level2">
+<h2>Getting into the workflow</h2>
+<p>Storing files in folders, and folders in a ‘filing cabinet’ helps centralise your work: it keeps it organised so it is easier to find.</p>
+<p>Using <strong>RStudio projects</strong> is like providing a filing cabinet for your work! Using them centralises your work, making your life easier as you do not have to manage where files are. For each project, you need to create <strong>one</strong> RStudio project.</p>
+</div>
+<div id="creating-a-new-rstudio-project" class="section level2">
+<h2>Creating a new RStudio project</h2>
+<p>Make your way through the following steps to create an RStudio project on your computer for all the work that you’ll do in this course.</p>
+<div id="step-1-start-a-new-project" class="section level3">
+<h3>Step 1: Start a new project</h3>
+<p>On your computer, open RStudio. Then, select <strong>‘File’</strong> &gt; <strong>‘New Project’</strong>.</p>
+<div class="figure" style="text-align: center">
+<img src="slides/images/Rstudio-02.png" alt="Setting up projects" width="960" />
+<p class="caption">
+Setting up projects
+</p>
+</div>
+</div>
+<div id="step-2-set-a-directory" class="section level3">
+<h3>Step 2: Set a directory</h3>
+<p>A pop-up window labelled <strong>‘New Project’</strong> should be displayed in RStudio. From the pop-up window, select <strong>‘New directory’</strong>.</p>
+<div class="figure" style="text-align: center">
+<img src="slides/images/Rstudio-03.png" alt="Selecting a directory" width="468" />
+<p class="caption">
+Selecting a directory
+</p>
+</div>
+</div>
+<div id="step-3-select-the-project-type" class="section level3">
+<h3>Step 3: Select the project type</h3>
+<p>You’re creating a new project, so select <strong>‘New project’</strong>.</p>
+<div class="figure" style="text-align: center">
+<img src="slides/images/Rstudio-04.png" alt="Project type" width="396" />
+<p class="caption">
+Project type
+</p>
+</div>
+</div>
+<div id="step-4-give-your-directory-a-name" class="section level3">
+<h3>Step 4: Give your directory a name</h3>
+<p>Enter the name of the directory you want to create. It would be a good idea to name it by the course you are taking, like “intro_datascience”.</p>
+<p>Select <strong>‘Create project’</strong> once you’ve named your directory.</p>
+<div class="figure" style="text-align: center">
+<img src="slides/images/Rstudio-05.png" alt="Naming the project" width="394" />
+<p class="caption">
+Naming the project
+</p>
+</div>
+</div>
+<div id="step-5-well-done-youve-now-created-a-rstudio-project" class="section level3">
+<h3>Step 5: Well done, you’ve now created a RStudio project!</h3>
+<p>Your RStudio will have a projects tab on the upper right hand corner. Remember, every time you start to work on something for this course, be sure to open this project!</p>
+<p>Whenever you are ready to write code for the course go to your project folder and then select the <strong>‘.Rproj’</strong> file. This will automatically open RStudio and take you to the right directory!</p>
+<div class="figure" style="text-align: center">
+<img src="slides/images/Rstudio-06.png" alt="The final view:" width="960" />
+<p class="caption">
+The final view:
+</p>
+</div>
+</div>
+</div>
+<div id="installing-packages" class="section level2">
+<h2>Installing packages</h2>
+<p>Packages are the way R users share useful code. You can think of each R package as a book. Once you’ve installed a package, you can load the code contained in it using <code>library</code> - which is like checking out a book from the library!</p>
+<p>There are more than 14,000 packages available on <a href="https://cran.r-project.org/">CRAN</a> contributed by a range of R users, from experts to those relatively new to R. There are another thousand or so on the <a href="https://www.bioconductor.org/">Bioconductor</a> archive, which focuses primarily on bioinformatics applications. There are many more on people’s Github pages that may be in development. For example: <a href="https://github.com/earowang/mists">Earo Wang’s <code>mists</code> package</a></p>
+<p>As an example, you can install the <code>rmarkdown</code> package for making reproducible reports using the following code chunk:</p>
+<pre class="r"><code>install.packages(&quot;rmarkdown&quot;)</code></pre>
+</div>
+<div id="lab-exercise-setting-yourself-up-for-the-course" class="section level2">
+<h2>Lab Exercise: Setting yourself up for the course</h2>
+<p>Continue to develop your skills in RStudio by making your way through this exercise. Follow the instructions specified in <strong>‘Creating a new RStudio project’</strong> to create another RStudio project that will contain all your materials as you work through this course.</p>
+<p>Then, use the console to install the <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> and <a href="http://visdat.njtierney.com/"><code>visdat</code></a> packages. You’ll use these packages throughout the course to read, visualise and analyse data.</p>
+<p>After you’ve installed the packages, run <code>library(tidyverse)</code> at the console, then, run the following code chunk:</p>
+<pre class="r"><code>glimpse(diamonds)
+filter(diamonds, carat &lt;= 2.5)</code></pre>
+<ul>
+<li><strong>What happened when you ran <code>library(tidyverse)</code> at the console?</strong></li>
+<li><strong>Do you think that you’ll always need to run that code to use the <code>tidyverse</code>?</strong></li>
+<li><strong>What happened when you ran the code chunk?</strong></li>
+</ul>
+</div>
+
+  </div> <!-- articleBandContent -->
+</div> <!-- pageContent -->
+
+<footer id="sticky-footer">
+<div class="container text-center">
+   Copyright &copy; 2020 Monash University
+</div>
+
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

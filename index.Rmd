@@ -102,7 +102,7 @@ The lecturer is available for consultation at the following times
 The tutors will be monitoring the ED forum during class times.
 
 Lecture recordings for this week will be posted on Moodle. These are based on lectures recorded for ETC1010, so please ignore any reference to Rstudio
-cloud and instead refer to the [Setup R handout](slides/setup.html).  
+cloud and instead refer to the [Setup R handout](./setup.html).  
 
 
 ### From the second week onwards
