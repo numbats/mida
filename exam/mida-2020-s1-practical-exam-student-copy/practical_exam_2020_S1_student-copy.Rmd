@@ -122,7 +122,10 @@ ggplot(___,
 
 !> Answer: 
 
-# 4. (3 pts) Compute the daily counts from the cumulative counts, and plot these for Victoria
+# 4. From cumulative to daily (3 pts) 
+
+## (a) Compute the daily counts from the cumulative counts, and 
+## (b) Compute the daily recovered counts from the cumulative recovered counts
 
 ```{r compute-daily-counts-student-copy}
 oz_covid19_daily <- ___ %>% 
@@ -135,13 +138,21 @@ oz_covid19_daily <- ___ %>%
   mutate(lag_counts = ___,
          # use the lag counts and the cumulative counts to calculate the daily counts
          # hint: Look closely at the cumulative counts and the lagged values.
-         daily = ___)
+         daily = ___,
+         # use the same approach to compute the daily recovered counts,
+         lag_recovered = ___,
+         daily_recovered = ___)
 
+
+```
+
+## (c) Plot the daily counts these for Victoria
+
+```{r plot-daily-counts-student-copy}
 # only plot the daily counts each day for victoria
 # (write your own code for this)
 ```
 
-!> Answer:
 
 # 5. (3pts) Use your internet search skills. What happened in Victoria that led to the spike in numbers in the first few days of May.  Post a link to where you found your information
 
