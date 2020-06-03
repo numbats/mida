@@ -16,6 +16,7 @@ opts_chunk$set(echo = TRUE,
                fig.retina = 2,
                comment = "#>"
 )
+set.seed(5510)
 ```
 
 
