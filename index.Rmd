@@ -76,13 +76,13 @@ Consultations begin from Week 2 (16th March)
 - Sherry Zhang: Thursday 9am-12pm
 - Stuart Lee: Monday 4:30pm-5:30pm and Wednesday 4:30pm-5:30pm 
 
+## Practical Exam
+
+Download the practical exam [at this link]() (Opens at 6pm).
+
 ## Project
 
-Instructions for the group project is available via the assessments tab.
-
-## Peer Evaluation
-
-The assignments you are required to evaluate are available [here](./groups.html).
+Instructions for the group project is available via the [assessments tab](./assessment.html).
 
 
 ## Schedule
