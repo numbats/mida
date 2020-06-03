@@ -1,0 +1,277 @@
+---
+title: "ETC5510 Practical exam S1 2020"
+author: "Your Name"
+output: 
+  html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  collapse = TRUE,
+  comment = "#>",
+  fig.height = 8,
+  fig.width = 12,
+  fig.align = "center",
+  cache = FALSE
+)
+```
+
+# Expectations for independent work
+
+COVID19 has meant that we've had to change a lot about how we teach and do the course. We wanted to give you all a fair opportunity to complete the assignment in a timeline that suits you. So we have given you 24 hours to complete the exam.
+
+Please make sure that you don't cheat, and be fair. Penalties for cheating will carry the same academic penalty
+
+- Open book
+- Internet access
+- No contacting / messaging / communicating friends during exam (penalty will be the same as cheating in exam)
+- No collaborating with others (students, anyone online)
+- No discussion on anything related to this exercise with others, the work submitted should reflect entirely your own work.
+- Clarification questions can be asked between 12-2pm on Wednesday at the lecture zoom chat
+
+# Due date
+
+- Practical exam is worth 20% of your final grade
+-  Rmd and HTML files have to be submitted on ED (7 possible marks)
+
+- Practical exam opens at **6:00pm on Wednesday 3rd June**
+- Practical exam closes at **6:00pm on Thursday 4th June**
+
+# Marks
+
+- 37 marks total
+  - 7 Marks for submitting an Rmd document that compiles to HTML will full answers
+  - 30 Marks for completing the ED quiz, which will contain the questions from the Rmd.
+    - These questions will be multiple choice or short answer.
+
+# Hand in
+
+Turn in your Rmd and html output into ED as you have done for assignments.
+
+# How to "turn off" code chunks
+
+Your rmarkdown document will not compile if there are parts of code that don't work. You can set certain code chunks to not evaluate by setting `eval = FALSE`, like so:
+
+```{r broken-code, eval = FALSE}
+# This isn't marked, this is an example of how to set the code chunk
+# to not evaluate by setting `eval = FALSE` as above.
+ggplot(___) +
+  geom____
+```
+
+# Exercise
+
+```{r pkgs}
+library(tidyverse)
+library(lubridate)
+```
+
+# About the data
+
+The COVID-19 pandemic has affected this semester of study, and how we currently live. This exercise will be to examine the data on COVID-19 incidence around the world. 
+
+- COVID-19 incidence: There are numerous sources of incidence data, and we will look at one of the [COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv)
+
+- State population data for Australia can be found at  https://en.wikipedia.org/wiki/List_of_Australian_states_and_territories_by_gross_state_product, and loaded using:
+
+- Detailed data for Australia is available in the file, "australia.csv" 
+
+Here is what each of the columns in the dataset contain
+
+- Date, as date information
+- State, each state of Australia
+- Count - cumulative count of covid19
+- deaths - cumulative deaths from covid19
+- recovered - cumulative recoveries from covid19
+- tested - cumulative count of those tested of covid19
+
+```{r read-oz}
+oz_covid19 <- read_csv("australia.csv") %>% mutate(date = ymd(date)) 
+```
+
+# 1. (1pt) What was the earliest and latest dates of Australian COVID-19 incidence in the data provided?
+
+```{r earliest-latest-answer-student-copy}
+# find the earliest and latest dates from `oz_covid19`
+```
+
+!> Answer: 
+
+# 2. (1pt) How many different states and territories are represented in this data? 
+
+```{r different-states-student-copy}
+# What is the number of different states and territories in the data?
+oz_covid19
+```
+
+!> Answer: 
+
+# 3. (2pts)  Make a plot of the cumulative COVID-19 incidence in Victoria over the time period of the data.
+
+```{r plot-cumulative-incidence-vic-student-copy}
+# filter data to only include victoria
+oz_covid19_vic <- oz_covid19 %>% ___
+
+# Make a plot of the cumulative COVID-19 incidence in Victoria over the time period of the data.
+ggplot(___,
+       aes(x = ___,
+           y = ___)) +
+  geom_col()
+```
+
+!> Answer: 
+
+# 4. (3 pts) Compute the daily counts from the cumulative counts, and plot these for Victoria
+
+```{r compute-daily-counts-student-copy}
+oz_covid19_daily <- ___ %>% 
+  # group by state
+  ___ %>% 
+  # arrange by date
+  ___ %>% 
+  # create a column that contains the lagged counts of cases
+  # look at `?dplyr::lag`
+  mutate(lag_counts = ___,
+         # use the lag counts and the cumulative counts to calculate the daily counts
+         # hint: Look closely at the cumulative counts and the lagged values.
+         daily = ___)
+
+# only plot the daily counts each day for victoria
+# (write your own code for this)
+```
+
+!> Answer:
+
+# 5. (3pts) Use your internet search skills. What happened in Victoria that led to the spike in numbers in the first few days of May.  Post a link to where you found your information
+
+
+!> Answer: ...
+  
+
+# 6. (2pts) If we want to compare the COVID-19 incidence across states, what is a limitation to only comparing the counts?
+
+
+!> Answer: ...
+
+# 7. (3pts) Join the count data with the state population data, and compute the COVID-19 incidence rate per 100,000 people. What state has the highest incidence rate?
+
+```{r join-count-incidence-rate-student-copy}
+state_pop <-tibble(
+    state = c("NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT", "DP"),
+    pop = c(8089526,6594804,5095100,1751693,2621680,426709,245869,420379, NA))
+
+# join the covid data with state population data
+oz_covid19_state <- ___
+
+# compute the COVID-19 incidence rate per 100,000 people. 
+oz_covid19_state_rate <- ___ %>%
+  mutate(rate = ___)
+
+# What state has the highest incidence rate?
+oz_covid19_state_rate %>% arrange(___)
+```
+
+!> Answer: 
+
+# 8. (2pts) Compute the COVID-19 testing rate per 1,000 people. Which state has the best (highest) testing performance?
+
+```{r state-test-rate-student-copy}
+oz_covid19_state_test_rate <- oz_covid19_state %>%
+  # calculate the testing rate per 1,000 people. 
+  mutate(test_rate = )
+
+# Which state has the best (highest) testing performance?
+oz_covid19_state_test_rate 
+```
+
+!> Answer: 
+
+# 9. (4pts) Compute 7 day average of daily counts and recovery for Australia. What do we learn about the trajectory of the pandemic in Australia?
+
+```{r q9-ozcovid-weekly-student-copy}
+oz_covid_weekly <- oz_covid19_daily %>% 
+  # step one, add weekly information using a function from lubridate
+  mutate(week = ___) %>% 
+  # For each of the weeks calculate the average for daily counts and daily recovered
+  ___ %>% 
+  # 
+  summarise(mean_daily_count ___,
+            ___)
+
+# create a plot of the weekly average cases
+ggplot(___,
+       aes(x = ___,
+           y = ___)) +
+  geom_line()
+  
+# create a plot of the weekly average recovered?
+ggplot(___) + 
+  ___
+
+```
+
+!> Answer: What are some things you learn from the plot?
+
+# 10. (2pts) From the data, what is the total number of cases and number of recovered cases for each state?
+
+Calculate the total number of cases and number of recovered cases for each state. 
+
+```{r covid_-state-totals-student-copy}
+oz_covid_state_totals <- oz_covid19_daily %>% 
+# calculate the total counts of cases and recovered per state
+  # there are likely multiple steps here
+  ___
+```
+
+!> Answer: 
+
+# 11. (3pts) Plot a map of the proportion of recovered cases.
+
+Read in the map file and join the state counts to the map data
+
+```{r state-join-counts-student-copy}
+library(sf)
+# read in the map file, oz_map.rds
+oz_map <- read_rds(___)
+
+# join the state totals data onto the oz_map data
+oz_shape_totals <- ___ %>% 
+# hint: remember to check what you are joining the columns by
+  left_join(___) %>% 
+  # compute the proportion of recovered
+  mutate(proportion_recovered = )
+```
+
+```{r plot-state-join-counts-student-copy}
+ggplot(___,
+       aes(x = ___,
+           y = latitude,
+           fill = ___)) + 
+  geom_sf() + 
+  scale_fill_viridis_c()
+
+```
+
+!> Answer: What do you learn from this plot?  
+
+# 12. (4 pts) Across all of Australia, plot the daily cases against the cumulative cases and interpret the graphic, what do we learn?
+
+```{r oz-covid19-daily-total-student-copy}
+oz_covid19_daily_total <-  oz_covid19_daily %>% 
+# Calculate the total cumulative cases for each day, and the
+  # daily number of cases across all states for each day
+  ___ %>% 
+  ___
+```
+
+```{r plot-oz-covid19-daily-total-student-copy}
+ggplot(oz_covid19_daily_total,
+       aes(x = ___,
+           y = ___)) + 
+  geom_line() +
+  scale_x_log10() + 
+  scale_y_log10()
+```
+
+!> Answer: What do you learn from this plot?
