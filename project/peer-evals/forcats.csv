@@ -1,0 +1,52 @@
+﻿Name,Email,Progress,Q1,Q2,Q3
+Aarathy Babu,abab0012@student.monash.edu,100%,A,got to know about crime data and house prices and their relations ,good presentation :)
+Abhishek Sinha,asin0080@student.monash.edu,100%,B,relation between personal income and various external factors,good presentation.
+Ajay Ganapathy Ajay Ganapathy,agan0012@student.monash.edu,100%,B,Highest incidences of burglary is in La trobe,Good choice using shiny. Can use more user interface components for better understanding.
+Anthonyseimonlage Dilinie Angela Seimon,asei0003@student.monash.edu,100%,A,The maps and visualizations were interesting,Brilliant work
+Aryan Jain,ajai0024@student.monash.edu,100%,A,I learned that residential incidents were among the lowest in Monash which gave me some peace of mind. I also learned that people in the age group of 45-54 had the highest average income. ,"They should have divided sections. Looked like they were all over the place. Otherwise, the dashboard was quite good."
+Bastiaan Jacques Theo Nabben,bnab0001@student.monash.edu,100%,B,Monash on the list of burglary. Very structured presentation.,Great project.
+Brendi Lien Jun Ang,ang0004@student.monash.edu,100%,C,There's a large disparity in income across age groups and sex.,Can be better with deeper analysis.
+Brenwin Lien Jie Ang,ang0005@student.monash.edu,100%,B,Learnt that there are many factors affecting home burglaries. ,The dashboard is very technical. Maybe more interactiveness and catering to the layman would be good.
+Chengzhi Ye,cyee0011@student.monash.edu,100%,B,"First, the content is very substantial, including data sources, crime analysis, regression analysis, and even map distribution. Secondly, using shiny app is very skillful, and the overall feeling is very neat. Third, the speed of presentation is moderate.","Although speaking at a comfortable speed, the time may be over. Second, when they talk about Overview, it might be too muchc, which leads to a bit of confusion in the rest of presentation."
+Cuiping Wei,cwei0018@student.monash.edu,100%,C,There are various methods of analysis.,"The presentation can be improved and there are repetitive parts.
+The navigation bar cannot be fixed, so you have to keep sliding up.
+The layout can be improved."
+Dang Thanh Nguyen,dngu0079@student.monash.edu,100%,B,"Their way of cleaning data is interesting. I think I learned something from them.
+The use of flexdashboard is great. They combine every plot together. I think it is really great. It would be amazing if I can see their source code.",They did great.
+Davide Tiziano Signor,dtsig1@student.monash.edu,100%,A,"Highest crime in La Trobe
+Higher crime rate in wealthier suburbs  
+
+","Very good user interactivity, maybe little less time on data cleaning"
+Dea Avega Editya,dedi0003@student.monash.edu,100%,C,Higher median suburb has higher median income,all is clear
+Dewi Lestari Amaliah,dama0007@student.monash.edu,100%,B,"I learn that income, house prices,  and burglary are related to each other.","No, I enjoyed the presentation."
+Emily Grace Sheehan,eshe0012@student.monash.edu,100%,C,Median house price has increased,"Perhaps speak a little slower when presenting, otherwise really good."
+Hai Hanh Ngo,hngo0005@student.monash.edu,0%,,,
+Helen Evangelina,heva0001@student.monash.edu,100%,D,a,good presentation
+Hui Min Valerie Choong,hmcho16@student.monash.edu,100%,B,detailed step by step presentation of data wrangling/ cleaning,"good step by step presentation of the data wrangling, not just showing a list of code"
+Jimmy Effendy,jeff0001@student.monash.edu,100%,B,"Highest house price is Stonington area. Monash is on the top 10 residential burglary cases. People living closer to the city has higher mean income, and higher house prices.",Nice visualization (map) presented in the dashboard. 
+Jinghan Zhang,jzha525@student.monash.edu,100%,B,.,I feel like there are a lot of things need to be improved.
+Jinhao Luo,jluo0015@student.monash.edu,100%,A,"45-54 is the age group with the highest income, the whole monnitong region has the highest house price in general","Nice presentation, nice explanation about the figure"
+Joyce Lee,jlee0179@student.monash.edu,100%,B,Actively using maps to closely examine the differences.,"good work, maybe can extend a bit on the questions to make the topic more interesting."
+Justin Thomas,jtho0048@student.monash.edu,100%,D,"Areas with more renters are more likely to have burglary incidences. People living in the highest median house price of around $2,000,000 have a higher median income.",Try to provide a summary after your respective sections so we get a glimpse of the main points.
+Ketan Kabu,kkab0003@student.monash.edu,100%,B,"Map visualizations
+",Good job.
+Lachlan Thomas Moody,ltmoo2@student.monash.edu,100%,C,"Nice formatting options for presentation, some interactive tools",Report requires more information/content overall
+Mayunk Bharadwaj,mbha0014@student.monash.edu,100%,B,Expect income to peak around age group 45-54,"Well presented, maps were well done"
+Priya Ravindra Dingorkar,pdin0008@student.monash.edu,100%,A,"I think it was a bit confusing, as I think each member did everything. But a lot of user interactive inputs",I think there should have a bit coordination while presenting
+Putu Wahyu Saputra,psap0002@student.monash.edu,100%,B,"I just learned the fact that Monash is one of the top 10 burglary incidents. 
+The visualized nicely on the map. It will be great if the map has any shiny indicator to play with.",The explanation is clear. Great presentation.
+Rui Min Lin,rlin0004@student.monash.edu,100%,B,"kingston as LGA with lowest house price, also results in second lowest personal income",great map visualisation
+Sen Wang,swan0165@student.monash.edu,100%,C,Their speech is comfortable,This analysis is very simple
+Siddhant Vaibhav Tirodkar,stir0003@student.monash.edu,100%,B,Did not know their was a positive relationship between burglary and residential rent and similarly between drug related offences and burglary!,The presentation and dashboard were excellent but i just feel they could've used less variables and focused more on them!
+Varsha Ujjinni Vijay Kumar,vujj0001@student.monash.edu,100%,A,"crime rates impact on the areas, personal income for different age groups,"," it was a bit confusing else it was all good."
+Wang Xue,xwan0196@student.monash.edu,100%,B,nothing ,maybe too much to describe the background 
+Yan Ma,ymaa0063@student.monash.edu,100%,B,"Beautiful maps, and their dashboard is very clear with all things noted by steps.",I think if they put the result of regression in tables will be better.
+Yanyi Wan,ywan0020@student.monash.edu,33%,B,,
+Yawen Zhang,yzha0275@student.monash.edu,100%,B,they give a lot of option to users to see the chart,they present fluence and normal
+Yezi He,yhee0063@student.monash.edu,0%,,,
+Yingtong Ye,yye40@student.monash.edu,100%,C,"The map function is fully used and informative. They reveal the relationship between house price and other factors, which is meaningful.",The presenters can be more familiar with the materials and be more confident. Overall they did well.
+Yiwen Jiang,yjia0021@student.monash.edu,100%,A,Check the LGA & Suburb part,good
+Yiwen Zhang,yzha0633@student.monash.edu,100%,B,"Incident rate has a positive relationship with house price in 2016. And people's average income is also higher in areas with high house prices, and there is a positive correlation between them.","Clear statement, but it's better to show more conclusions than processes"
+Yuheng Cui,ycui0008@student.monash.edu,100%,C,The crimes in Victoria,Great work on digging in the relationships between crimes and other variables
+Zhiruo Zhang,zzha0001@student.monash.edu,100%,C,They draw the fantastic plot and the great ggmap! ,"They do not have a really clear explanation on their graphs, like the title for the LGA, it would be more friendly if they write Local Government Area instead. 
+"

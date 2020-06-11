@@ -1,0 +1,61 @@
+﻿Name,Email,Progress,Q1,Q2,Q3
+Aarathy Babu,abab0012@student.monash.edu,100%,A,parking fine should not be taken lightly,really good presentation.
+Abhishek Sinha,asin0080@student.monash.edu,0%,,,
+Ajay Ganapathy Ajay Ganapathy,agan0012@student.monash.edu,100%,B,"- analysis on busiest parking streets in Melbourne
+- Parking trends across weekdays, weekends and holidays,
+- working days, jan and feb has the lowest parking trends.
+- Trends in parking violations
+- average on street parking - 7$/hr
+- average parking fines  - $124","- Nice use of maps and popovers in the map
+- can present data cleaning in the better way
+- good use of visualizations
+- good to see outliers taken into account
+- good use of machine learning models."
+Anthonyseimonlage Dilinie Angela Seimon,asei0003@student.monash.edu,100%,A,The movable map was a brilliant idea!,The analysis was great!
+Aryan Jain,ajai0024@student.monash.edu,100%,B,I learned that the parking fines in Victoria are quite high and 2.9% vehicles violated parking restrictions.,The presenters managed to keep my attention. Very nice.
+Bastiaan Jacques Theo Nabben,bnab0001@student.monash.edu,100%,B,Similar approach as the assignments/lectures but very broad.,"Great project, a lot of work."
+Brendi Lien Jun Ang,ang0004@student.monash.edu,0%,,,
+Brenwin Lien Jie Ang,ang0005@student.monash.edu,100%,A,Very well done. Thorough analysis on parking fines in Melbourne at a granular level while breaking them up to make them clear and interactive.,Good job!
+Chengzhi Ye,cyee0011@student.monash.edu,100%,C,"The data is very detailed, and the form of presentation is also very rich. Also, the  interface in the end of presentation is much cleaner, and there is a sharp contrast with the front.
+","Because there are too many figures, the pages are very dense. I hope we can integrate them. The presentation is not proficient and the explanation is too plain.
+When one person finishes talking about changing another person, he is too stiff and not smooth enough."
+Cuiping Wei,cwei0018@student.monash.edu,100%,B,"Good presentation, good analysis.",The speech was not very coherent.
+Dang Thanh Nguyen,dngu0079@student.monash.edu,100%,B,It is interesting.,I think they can talk a bit faster
+Davide Tiziano Signor,dtsig1@student.monash.edu,100%,A,"Duration on parking on average increases on holidays 
+More parking violations in areas with longer parking limits 
+",January might have lower parking due to people being on summer holidays 
+Dea Avega Editya,dedi0003@student.monash.edu,100%,C,breaking parking rule can broke our walet,all presenters deliver the topic clearly
+Dewi Lestari Amaliah,dama0007@student.monash.edu,100%,B,"The presentation was interesting, I was quite surprised that a lot of people violated the parking rules.","No, however, some of the analysis was similar to our assignment 2. May be should improve the creativity of analyzing."
+Emily Grace Sheehan,eshe0012@student.monash.edu,100%,B,Two of the top 10 busiest parking spots in Melbourne are in Lonsdale St. ,I really liked the images used in your presentation and liked how you did a takeaway. 
+Hui Min Valerie Choong,hmcho16@student.monash.edu,100%,B,map on the landing page was very eye-catching and interesting,providing a summary of the data for the graphs was a good idea
+Jimmy Effendy,jeff0001@student.monash.edu,100%,B,"Lonsdale street is the busiest street in Melbourne, however parking violation mostly occur in Exhibition street.
+
+Unusual parking patterns mostly occur during holidays.
+
+The amount of fines paid in Melbourne is enormous.
+",Its nice to see how different parking fines differ for different parts in Melbourne. Presenters spoke clearly during the presentation.
+Jinghan Zhang,jzha525@student.monash.edu,100%,B,.,well done
+Jinhao Luo,jluo0015@student.monash.edu,100%,A,Parking fees are very expensive in Melbourne. and I think parking fees have contributed a lot to government finance. Lonsdale Street is the busiest street might difficult to find car park.,"Nice presentation, and help me understand a lot about car parking in Melbourne."
+Joyce Lee,jlee0179@student.monash.edu,100%,B,Various use of figures.,Very useful and practical research with logical sequence in presentation.
+Junhao Wang,jwan0296@student.monash.edu,100%,B,inserting a map makes spots in city level easy to observe ,add interactive plot can be more interactive
+Justin Thomas,jtho0048@student.monash.edu,100%,A,Lonsdale Street is one of the most busiest streets in Melbourne Central. Exhibition Street has the most parking violations.,"Not really, that was a well laid out presentation. Visualizations were amazing!"
+Lachlan Thomas Moody,ltmoo2@student.monash.edu,100%,B,Good use of interactive plot elements to explore data,Summarise key learnings/takeways from storyboard
+Mayunk Bharadwaj,mbha0014@student.monash.edu,100%,A,Melbourne city makes $93 million in parking fines every year...,"Dashboard was really good - didn't feel overwhelmed by amount of info. Also, liked the Kyle Sandilands image!"
+Priya Ravindra Dingorkar,pdin0008@student.monash.edu,100%,B,"I have seen, how different plots and new plots in r. Also their lm is really cool.
+",Use rpart to cover most datapoints
+Putu Wahyu Saputra,psap0002@student.monash.edu,100%,A,I learned that showing a map as an interactive media is quite important to make people understand about the topic.,"For the first part, I think I couldn't manage to show the table of vehicles Count per day."
+Rui Min Lin,rlin0004@student.monash.edu,100%,B,exihibition street have the most parking violations,great graphs and analysis
+Sam Lyubic,slyu0007@student.monash.edu,100%,A,That most parking violations occur between 5-20 min,"Well presented, well spoken, visuals of the presenter could make it a bit more engaging "
+Sen Wang,swan0165@student.monash.edu,100%,C,I think their analysis is good enough,They need to choose new topic to analyze.
+Siddhant Vaibhav Tirodkar,stir0003@student.monash.edu,100%,B,A lot of money was collected by the Victorian government in 2019 through parking tickets,The presentation and dashboard were really good.  But i kind of felt the topic was a little vague but interesting at the same time!
+Varsha Ujjinni Vijay Kumar,vujj0001@student.monash.edu,100%,B,"parking conditions and parking fines, pay parking tickets","map is amazing, impressive cleaning"
+Vinny Vu,vvuu0009@student.monash.edu,100%,A,"Lonsdale Street is one of the busiest roads for parking. This may be due to the abundence of shops in the area.
+There is a significantly larger duration of parking on weekends and holidays ",Some descriptions on what the plots can be useful for analysis
+Wang Xue,xwan0196@student.monash.edu,100%,B,"the map is great, ",great presentation 
+Yan Ma,ymaa0063@student.monash.edu,100%,B,Some figures are wonderful.,It will be better to use a table than just print the tibble :)
+Yawen Zhang,yzha0275@student.monash.edu,100%,C,make some color card to talk about important number,The pause in the middle is a bit long
+Yingtong Ye,yye40@student.monash.edu,100%,B,interesting topic and various plots to describe the pattens.,presenters are engaging and interpret in a very clear way.
+Yiwen Jiang,yjia0021@student.monash.edu,100%,A,parking duration in Melbourne,Plot of Lonsdale Street contains some blank
+Yiwen Zhang,yzha0633@student.monash.edu,100%,B,"Unusual pattern of parking duration occurs mostly on holidays, such as 10 June 2019: Queen's birthday. And for working days, Jan and Feb has lower parking duration than other months.","On the analysis of Lansdale Street , maybe because the plots are quite a lot, so some of them can't be seen clearly. You can adjust the size of the image to facilitate viewing."
+Yuheng Cui,ycui0008@student.monash.edu,100%,B,Parking status in different days.,beautiful plots very informative.
+Zhiruo Zhang,zzha0001@student.monash.edu,100%,B,Their presention provide many useful information about parking.  It is perfect!,"I think instead only draw the graph maybe they could do more analysis. Not only explained what the graphs show us, but also combine with our daily life. Those factors related to them and do some prediction with the changing time like the time related forecast.  "
